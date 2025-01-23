@@ -1,0 +1,48 @@
+{
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "update.showReleaseNotes": false,
+  "workbench.startupEditor": "none",
+  "window.zoomLevel": 0,
+  "editor.fontSize": 14,
+  "explorer.confirmDragAndDrop": false,
+  "code-runner.languageIdToFileExtensionMap": {
+    "bat": ".bat",
+    "powershell": ".ps1",
+    "typescript": ".ts"
+  },
+  "code-runner.clearPreviousOutput": true,
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.colorCustomizations": {},
+  "git.autofetch": true,
+  "explorer.compactFolders": false,
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "markdown.preview.scrollEditorWithPreview": false,
+  "markdown.preview.scrollPreviewWithEditor": false,
+  "editor.find.addExtraSpaceOnTop": false,
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.tree.stickyScrollMaxItemCount": 1,
+  "gitlens.graph.scrollMarkers.enabled": false,
+  "indentRainbow.indicatorStyle": "light",
+  "editor.stickyScroll.scrollWithEditor": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+  "editor.wordWrapColumn": 40,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "never",
+    "source.fixAll.ts": "never",
+    "source.fixAll.unusedImports": "never",
+    "source.organizeImports": "never",
+    "source.fixAll.eslint": "never",
+    "source.ignoreTrimWhitespace": "always"
+  },
+  "cSpell.enabled": false,
+  "files.trimTrailingWhitespaceInRegexAndStrings": false,
+  "editor.trimAutoWhitespace": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "cSpell.blockCheckingWhenAverageChunkSizeGreaterThan": 80,
+  "diffEditor.ignoreTrimWhitespace": true
+}

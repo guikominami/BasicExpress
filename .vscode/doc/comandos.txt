@@ -1,0 +1,99 @@
+---------------------------------
+Node
+---------------------------------
+npm init -y
+npm init es6 -y
+//não precisa ficar reiniciando o server
+npm i -g nodemon
+npm install mongodb
+
+#instalar typescript
+npm install -D typescript
+npm install -D ts-node
+
+npm i express body-parser cookie-parser compression cors
+npm i -D @types/express @types/body-parser @types/cookie-parser @types/compression @types/cors
+
+---------------------------------
+Setar variáveis de ambiente:
+---------------------------------
+Press Win button, type env or environment > Enter > Open "Edit System Environment Variables"
+Click on "Environment Variables" button at the bottom of dialog. See below image.
+On "System Variables" (lower span), click on "Path" to edit.
+REINICIAR VSCODE
+
+---------------------------------
+Docker
+---------------------------------
+
+#verifica as imagens
+docker images
+
+#verifica as imagens que estão rodando
+docker ps
+
+---------------------------------
+Mongodb
+---------------------------------
+
+#roda o container expondo a porta - se nao encontrar a imagem, vai baixar uma
+docker run --name mongodb6 -p 27017:27017 -e MONGODB_INITDB_ROOT_USERNAME=mongodb -e MONGODB_INITDB_ROOT_PASSWORD=password -d mongodb/mongodb-community-server:7.0.0-ubi8
+
+#test the connection
+docker exec -it mongodb6 mongosh --username mongodb --password password
+
+show dbs
+
+#create database
+use blog
+
+#create collections (sql table) from scratch
+db.createCollection("posts")
+
+#create and insert data
+db.posts.insertOne(object)
+
+db.posts.insertOne({
+  title: "Post Title 1",
+  body: "Body of post.",
+  category: "News",
+  likes: 1,
+  tags: ["news", "events"],
+  date: Date()
+})
+
+#select
+db.posts.find()
+db.posts.find( {category: "News"} )
+db.posts.find({}, {title: 1, date: 1})
+db.posts.find({}, {_id: 0, title: 1, date: 1})
+
+#update
+db.posts.updateOne( { title: "Post Title 1" }, { $set: { likes: 2 } } ) 
+
+#update or insert if not
+db.posts.updateOne( 
+  { title: "Post Title 5" }, 
+  {
+    $set: 
+      {
+        title: "Post Title 5",
+        body: "Body of post.",
+        category: "Event",
+        likes: 5,
+        tags: ["news", "events"],
+        date: Date()
+      }
+  }, 
+  { upsert: true }
+)
+
+
+#delete
+db.posts.deleteOne({ title: "Post Title 5" })
+
+db.posts.deleteMany({ category: "Technology" })
+---------------------------------
+GIT
+---------------------------------
+git push -u origin main
