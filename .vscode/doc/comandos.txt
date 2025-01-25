@@ -1,20 +1,38 @@
 ---------------------------------
-Node
+Node basic install dependencies
 ---------------------------------
 npm init -y
 npm init es6 -y
 //não precisa ficar reiniciando o server
 npm i -g nodemon
 npm install mongodb
-
-#instalar typescript
-npm install -D typescript
-npm install -D ts-node
-
 npm i express body-parser cookie-parser compression cors
 npm i -D @types/express @types/body-parser @types/cookie-parser @types/compression @types/cors
 
+---------------------------------
+Node additional dependencies
+---------------------------------
+#validate data
 npm i joi
+
+#log api transaction
+npm i morgan
+
+#configuração do projeto
+npm i config
+
+#debug 
+npm i debug
+
+#criar templates html
+npm i pug
+
+---------------------------------
+typescript
+---------------------------------
+#instalar typescript
+npm install -D typescript
+npm install -D ts-node
 
 ---------------------------------
 Setar variáveis de ambiente:
@@ -27,7 +45,6 @@ REINICIAR VSCODE
 ---------------------------------
 Docker
 ---------------------------------
-
 #verifica as imagens
 docker images
 

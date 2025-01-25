@@ -1,0 +1,6 @@
+{
+  "name": "Basic Express API - Production",
+  "mail": {
+    "host": "prod-mail-server"
+  }
+}
